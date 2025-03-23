@@ -320,7 +320,7 @@ fn visit_md_node(node: mdast::Node, depth: usize) -> Option<String> {
 
         mdast::Node::ThematicBreak(_) => Some("\n---\n".to_string()),
 
-        mdast::Node::BlockQuote(blockquote) => {
+        mdast::Node::Blockquote(blockquote) => {
             let default_blockquote_color = "black on white".to_string();
 
             let color = styles
